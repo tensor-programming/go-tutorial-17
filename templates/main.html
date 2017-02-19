@@ -1,0 +1,22 @@
+{{define "signin"}}
+{{template "header" .}}
+<h1 class="alert alert-info">Login</h1>
+<div class="container">
+    {{with .Errors.message}}
+    <div class="alert alert-danger">
+        {{.}}
+    </div>
+    {{end}}
+    <form method="POST" action="/login">
+        <label class="form-control" for="uname">User Name</label>
+        <input class="form-control" type="text" id="uname" name="uname">
+        <label class="form-control" for="password">Password</label>
+        <input class="form-control" type="password" id="password" name="password">
+        <button class="btn btn-info" type="submit">Submit</button>
+    </form>
+</div>
+<div class="alert alert-info" role="alert">
+    <a class="alert-link" href="/signup">Sign Up</a>
+</div>
+{{template "footer" .}}
+{{end}}

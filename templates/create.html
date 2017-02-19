@@ -1,0 +1,42 @@
+{{define "create"}}
+{{template "header" .}}
+{{template "navbar-create" .}}
+<div class="jumbotron">
+    <h1 class="text-center">Create a new page!</h1>
+</div>
+<div>
+    <form action="/create/" method="POST">
+        <div><label for="title">Enter a Title!</label></div>
+        <div><input class="form-control" name="title" id="title"></textarea></div>
+        <div><label for="body">Enter a body!</label></div>
+        <div><textarea class="form-control" name="body" id="body" cols="80" rows="25"></textarea></div>
+        <div><input class="btn btn-info" type="submit"  value="Create Page!"></div>
+    </form>
+</div>
+{{template "footer" .}}
+{{end}}
+
+{{define "navbar-create"}}
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Create!</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/example/">Home!</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/create/">Create a New Page!</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/upload/">Upload a File</a>
+        </li>
+        <form method="post" action="/search" class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" id="search" name="search" class="form-control" placeholder="Search for a page!">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </ul>
+</nav>
+{{end}}

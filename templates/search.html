@@ -1,0 +1,11 @@
+{{define "search" }}
+{{template "header" .}}
+{{template "navbar" .}}
+<div class="jumbotron">
+    <h3 class="text-center">{{.Title}} does not exist!</h3>
+    <div class="container-fluid">
+        [<a href="/create/">Click Here to create a new page!</a>]
+    </div>
+</div>
+{{template "footer" .}}
+{{end}}

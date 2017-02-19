@@ -1,0 +1,15 @@
+{{define "test"}}
+{{template "header" .}}
+{{template "navbar" .}}
+<div class="jumbotron">
+    <h1 class="text-center">{{.Title}}</h1>
+</div>
+<div class="container-fluid">
+    [<a href="/edit/{{.Title | urlize }}">edit</a>]
+    <div>{{printf "%s" .Body}}</div>
+</div>
+<form action="/logout" method="post">
+    <button class="btn btn-warning" type="submit">Logout</button>
+</form>
+{{template "footer" .}}
+{{end}}

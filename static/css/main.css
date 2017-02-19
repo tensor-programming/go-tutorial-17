@@ -1,0 +1,34 @@
+h1, h1 a, h1 a:visited {
+  text-decoration: none;
+  font-family: "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", Geneva, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: black;
+}
+
+h1 {
+  height: 70px;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", Geneva, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+textarea {
+  font-family: monospace;
+  font-size: large;
+}
+
+#content {
+  padding-left: 100px;
+}
+
+
+
+
+
+
+
+
